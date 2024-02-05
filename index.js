@@ -173,7 +173,7 @@ function renderCartCard(courseId, title, price, img) {
     </figure>
     <div class="flex items-center">
       <div class="p-1">
-        <h2 class="font-bold">${title}!</h2>
+        <h2 class="font-bold">${title}</h2>
         <p>${price} TK</p>
       </div>
       <button class="btn btn-sm bg-none" onclick="removeFromCart('${courseId}')">
