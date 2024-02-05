@@ -59,7 +59,7 @@
             <li><a>Course</a></li>
             <li><a>Others</a></li>
             <li><a>Blogs</a></li>
-            <button class="rounded-full btn-sm text-white bg-green-400">
+            <button class="rounded-full btn-sm font-normal text-white bg-green-400">
               Sign Out
             </button>
           </ul>
@@ -67,93 +67,44 @@
       </div>
     </nav>
 
-    <h1 class="font-bold text-4xl text-[#413960] mt-4">All Courses</h1>
-    <!-- Card Section -->
-    <section class="flex gap-[20px]">
-      <div id="parent" class="flex flex-col  gap-4 mb-4">  
-        
-        <!-- cart1 -->
-
-        <!-- <div id="btn-items " class="card w-80 bg-base-100 shadow-xl">
-          <figure class="px-4 pt-8">
-            <img
-              id="cart-img"
-              src="./images//Rectangle 6.png"
-              alt="img"
-              class="rounded-lg"
-            />
-          </figure>
-          <div class="p-4 px-4 text-start">
-            <h2 id="cart-title" class="title card-title text-2xl">
-              ${item.title}
-            </h2>
-            <p id="" class="mb-2">${item.price}TK</p>
-            <button
-              id="cart-btn" 
-              
-              class="rounded-full btn-sm text-white hover:bg-green-600 bg-[#21B573]"
-            >
-              Buy Courses
-            </button>
-          </div>
-          <div class="flex justify-between p-3">
-            <div class="flex items-center gap-2">
-              <img src="./images/calendar-outline 1.png" alt="" srcset="" />
-              <p>Start 20 April, 2021</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <img src="./images/people-outline 1.png" alt="" srcset="" />
-              <p>${item.seats} Seats</p>
-            </div>
-          </div>
-        </div> -->
-
-      </div>
-
-      <div id="menu-container" class="p-6">
-        <div id="img-container" class="card card-side flex">
-          <figure>
-            <img
-              id="imgg"
-              class="w-16 p-2 rounded-2xl"
-              src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-              alt="Movie"
-            />
-          </figure>
-          <div class="flex">
-            <div class="p-1">
-              <h2 id="menu-title" class="font-bold">New movie is released!</h2>
-              <p>Click the</p>
-            </div>
-            <button class="btn btn-square">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <img src="./images//Line 1.png" alt="" />
-        <div class="p-6 flex justify-between">
-          <div>
-            <h1 class="font-semibold">Sub-Total</h1>
-            <p> 0 Items</p>
-          </div>
-          <h1 class="font-bold">00 TK</h1>
-        </div>
-      </div>
     
+    <h1 class="font-bold text-4xl text-[#413960] mt-4">All Courses</h1>
+  <!-- Card Section -->
+  <section class="md:flex  md:gap-[20px]">
+    <div id="parent" class=" md:grid md:grid-cols-2 gap-8 md:gap-6  mb-4">
+      <!-- append js card -->
+    </div>
+
+
+
+    <section class="flex gap-[20px]">
+      <div id="parent" class="md:grid md:grid-cols-2 gap-8 md:gap-6 grid-cols-1">
+        <!-- Course cards will be dynamically generated here based on data -->
+      </div>
+
+      <div class="p-6">
+        <div id="menu-container" class="bg-base-100 shadow-xl">
+          <!-- dynamic card added in this  -->
+
+        </div>
+        
+        <div class="bg-base-100 shadow-xl ">
+          <img src="./images//Line 1.png" alt="" />
+          <div class=" p-6 flex justify-between">
+            <div>
+              <h1 class="">Sub-Total</h1>
+              <h1 class=""><span id="subtotal-info">0 Items</span></h1>
+            </div> 
+            <p > <span id="total-amount" class="font-bold"></span></p>
+          </div>
+        </div>
+      </div>
     </section>
+  </section>
+
+
+
+
 
     <!-- Footer Part -->
 

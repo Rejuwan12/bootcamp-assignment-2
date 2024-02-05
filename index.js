@@ -1,203 +1,195 @@
-const data = [
-      {
-          id:1,
-          title: 'modern javascript 01',
-          img: 'www.imgbb.com/12',
-          seats:60,
-          price: 1300
-      },
-      {
-          id:2,
-          title: 'modern javascript 02',
-          img: 'www.imgbb.com/12',
-          seats:60,
-          price: 1300
-      },
-      {
-          id:3,
-          title: 'modern javascript 03',
-          img: 'www.imgbb.com/12',
-          seats:60,
-          price: 1300
-      },
-      {
-          id:4,
-          title:'modern javascript 04',
-          img: 'www.imgbb.com/12',
-          seats:60,
-          price: 1300
-      },
-      {
-          id:5,
-          title:'modern javascript 04',
-          img: 'www.imgbb.com/12',
-          seats:60,
-          price: 1300
-      },
-      {
-          id:6,
-          title:'modern javascript 04',
-          img: 'www.imgbb.com/12',
-          seats:60,
-          price: 1300
-      },
-]
 
-document.getElementById('parent').innerHTML = data.map(item => {
-   return (
-      `<div>
-      <div id="btn-items " class="card w-80 bg-base-100 shadow-xl">
+ 
+// main data 
+const data = [
+  {
+    id:1,
+    title: 'Modern Psychology 1',
+    img: './images/Rectangle 13.png',
+    seats:60,
+    price: 1450
+},
+{
+    id:2,
+    title: 'Modern Psychology 2',
+    img: './images/Rectangle 15.png',
+    seats:60,
+    price: 1360
+},
+{
+    id:3,
+    title: 'Modern Psychology 3',
+    img: './images/Rectangle 30.png',
+    seats:60,
+    price: 1300
+},
+{
+    id:4,
+    title:'Modern Psychology 4',
+    img: './images/Rectangle 34.png',
+    seats:60,
+    price: 1400
+},
+{
+    id:5,
+    title:'Modern Psychology 5',
+    img: './images/Rectangle 33.png',
+    seats:60,
+    price: 1600
+},
+{
+    id:6,
+    title:'Modern Psychology 6',
+    img: './images/Rectangle 6.png',
+    seats:60,
+    price: 1200
+},
+];
+
+
+
+
+// start js code 
+
+const cart = {
+  items: [],
+  subtotal: 0,
+};
+
+
+
+// dynamic card function 
+function renderCourses() {
+  const parentElement = document.getElementById('parent');
+  parentElement.innerHTML = data.map(item => {
+    return `
+    <div class="card w-80 bg-base-100 shadow-xl">
       <figure class="px-4 pt-8">
-        <img
-          id="cart-img"
-          src="./images//Rectangle 6.png"
-          alt="img"
-          class="rounded-lg"
-        />
+        <img src="${item.img}" alt="Course Image" />
       </figure>
       <div class="p-4 px-4 text-start">
-        <h2 id="cart-title" class="title card-title text-2xl">
-          ${item.title}
-        </h2>
-        <p id="" class="mb-2">${item.price}TK</p>
-        <button
-          id="cart-btn" 
-          
-          class="rounded-full btn-sm text-white hover:bg-green-600 bg-[#21B573]"
-        >
+        <h2 class="card-title text-2xl">${item.title}</h2>
+        <p class="mb-2">${item.price} TK</p>
+        <button class="buy-btn rounded-full btn-sm text-white hover:bg-green-600 bg-[#21B573]"
+          onclick="buyCourse(${item.id}, '${item.title}', ${item.price}, 'course-${item.id}')">
           Buy Courses
         </button>
       </div>
       <div class="flex justify-between p-3">
         <div class="flex items-center gap-2">
-          <img src="./images/calendar-outline 1.png" alt="" srcset="" />
+          <img src="./images/calendar-outline 1.png" alt="" srcset="">
           <p>Start 20 April, 2021</p>
         </div>
         <div class="flex items-center gap-2">
-          <img src="./images/people-outline 1.png" alt="" srcset="" />
+          <img src="./images/people-outline 1.png" alt="" srcset="">
           <p>${item.seats} Seats</p>
         </div>
       </div>
-    </div></div>`
-   )
-     
- })
-
-
- document.getElementById('menu-container')
-
- // solved ----------------------------
-
-
-//       let abc = data.map(items =>{
-//             return items
-//       })
-//  var cart = []
-//  function addCart(a){
-//    cart.push(...abc(a));
-//    displayCart()
-//  }
-
-//  function displayCart(a){
-//      if(cart.length == 0){
-//       document.getElementById('menu-container').innerHTML = 'Cart Emty'
-//      }
-//      else{
-//       document.getElementById('menu-container').innerHTML = cart.map(items => {
-//         var {title,price,img} = items;
-//         return `  <div id="img-container" class="card card-side flex">
-//         <figure>
-//           <img
-//             id="imgg"
-//             class="w-16 p-2 rounded-2xl"
-//             src="https://daisyui
-//         .com/images/stock/photo-1635805737707-575885ab0820.jpg"
-//             alt="Movie"
-//           />
-//         </figure>
-//         <div class="flex">
-//           <div class="p-1">
-//             <h2 id="menu-title" class="font-bold">${title}</h2>
-//             <p>${price}</p>
-//           </div>
-//           <button class="btn btn-square">
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               class="h-6 w-6"
-//               fill="none"
-//               viewBox="0 0 24 24"
-//               stroke="currentColor"
-//             >
-//               <path
-//                 stroke-linecap="round"
-//                 stroke-linejoin="round"
-//                 stroke-width="2"
-//                 d="M6 18L18 6M6 6l12 12"
-//               />
-//             </svg>
-//           </button>
-//         </div>
-//       </div>
-//       <img src="./images//Line 1.png" alt="" />
-//       <div class="p-6 flex justify-between">
-//         <div>
-//           <h1 class="font-semibold">Sub-Total</h1>
-//           <p>Items</p>
-//         </div>
-//         <h1 class="font-bold">1500 TK</h1>
-//       </div>`
-//       })
-//      }
-//  }
+    </div>`;
+  }).join('');
+}
 
 
 
 
 
 
+function buyCourse(id, title, price, courseId) {
+  const selectedItem = data.find(item => item.id === id);
+
+  if (selectedItem && selectedItem.seats > 0) {
+    const newItem = { id, title, price };
+    cart.items.push(newItem);
+    cart.subtotal += price;
+
+    // Decrease seat
+    selectedItem.seats--;
+
+    // Render 
+    renderCartCard(courseId, title, price, selectedItem.img);
+
+    renderCart();
+    // update 
+    renderCourses(); 
+  } else {
+    alert('No available seats for this course!');
+  }
+}
+
+
+//---------------------------- remove cart item seat------------------------
+
+
+function removeFromCart(courseId) {
+  const removedItemIndex = cart.items.findIndex(item => `course-${item.id}` === courseId);
+
+  if (removedItemIndex !== -1) {
+    const removedItem = cart.items[removedItemIndex];
+
+    // Increase  seats
+    const selectedCourse = data.find(item => item.id === removedItem.id);
+    selectedCourse.seats++;
+
+    cart.subtotal -= removedItem.price;
+    cart.items.splice(removedItemIndex, 1);
+
+    // Remove the card 
+    const removedCard = document.getElementById(courseId);
+    removedCard.remove();
+
+    renderCart();
+    renderCourses(); 
+  } else {
+    alert('Course not found in the cart!');
+  }
+}
+
+
+// ---------------------calculate --------------------------
+
+function renderCart() {
+  const subtotalInfo = document.getElementById('subtotal-info');
+  const totalAmount = document.getElementById('total-amount');
+
+  subtotalInfo.textContent = `${cart.items.length} Items`;
+  totalAmount.textContent = `${cart.subtotal} TK`;
+}
 
 
 
 
+// -------------------generate card ---------------------------------
 
+function renderCartCard(courseId, title, price, img) {
+  const menuContainer = document.getElementById('menu-container');
 
+  const newCard = document.createElement('div');
+  newCard.classList.add('card', 'card-side', 'flex');
+  newCard.id = courseId;
 
+  newCard.innerHTML = `
+    <figure>
+      <img class="w-16 p-2 rounded-2xl" src="${img}" alt="Course Image" />
+    </figure>
+    <div class="flex items-center">
+      <div class="p-1">
+        <h2 class="font-bold">${title}!</h2>
+        <p>${price} TK</p>
+      </div>
+      <button class="btn btn-sm bg-none" onclick="removeFromCart('${courseId}')">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  `;
 
+  menuContainer.appendChild(newCard);
+}
 
-
-
-
-
-
-
-
-
-
-
-// let btn = document.querySelectorAll('#btn-item');
-
-// let price = document.querySelectorAll('#price');
-// // console.log(btn);
-// console.log(price);
-
-// for(var i = 0; i < btn.length; i++){
-//    btn[i].addEventListener('click', function(){
-//       let title = document.querySelectorAll('#title');
-//       console.log(title[i]); 
-//        for(var p = 0; p <= title.length; p++){
-//             console.log(title[p].innerHTML); 
-//        }
-            
-//             })
-// }
-
-
-
-// btn.map((item)=>{
-//       console.log(item);
-//       item.addEventListener('click', function(){
-//             console.log('clicked');
-      
-//       })
-// })
+document.addEventListener('DOMContentLoaded', () => {
+  renderCourses();
+  renderCart();
+});
 
