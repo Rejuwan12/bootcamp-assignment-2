@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootcamp Assignment 02</title>
+    <link rel="stylesheet" href="/style2.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="max-w-screen-lg mx-auto">
+    <!-- navbar related -->
+    <nav class="navbar p-6 bg-[#FFF]">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#FFF] rounded-box w-52"
+          >
+            <li><a>Books</a></li>
+            <li><a>Course</a></li>
+            <li><a>Others</a></li>
+            <li><a>Blogs</a></li>
+            <button class="rounded-full btn-sm  text-white bg-green-400">
+              Sign Out
+            </button>
+          </ul>
+        </div>
+        <a href="/index.html"
+          ><img class="w-44" src="./images//logo.png" alt="logo"
+        /></a>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <ul
+            class="menu menu-horizontal items-center text-black gap-2 font-bold px-1"
+          >
+            <li><a>Books</a></li>
+            <li><a>Course</a></li>
+            <li><a>Others</a></li>
+            <li><a>Blogs</a></li>
+            <button class="rounded-full btn-sm text-white bg-green-400">
+              Sign Out
+            </button>
+          </ul>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="font-bold text-4xl text-[#413960] mt-4">All Courses</h1>
+    <!-- Card Section -->
+    <section class="flex gap-[20px]">
+      <div id="parent" class="flex flex-col  gap-4 mb-4">  
+        
+        <!-- cart1 -->
+
+        <!-- <div id="btn-items " class="card w-80 bg-base-100 shadow-xl">
+          <figure class="px-4 pt-8">
+            <img
+              id="cart-img"
+              src="./images//Rectangle 6.png"
+              alt="img"
+              class="rounded-lg"
+            />
+          </figure>
+          <div class="p-4 px-4 text-start">
+            <h2 id="cart-title" class="title card-title text-2xl">
+              ${item.title}
+            </h2>
+            <p id="" class="mb-2">${item.price}TK</p>
+            <button
+              id="cart-btn" 
+              
+              class="rounded-full btn-sm text-white hover:bg-green-600 bg-[#21B573]"
+            >
+              Buy Courses
+            </button>
+          </div>
+          <div class="flex justify-between p-3">
+            <div class="flex items-center gap-2">
+              <img src="./images/calendar-outline 1.png" alt="" srcset="" />
+              <p>Start 20 April, 2021</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./images/people-outline 1.png" alt="" srcset="" />
+              <p>${item.seats} Seats</p>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
+      <div id="menu-container" class="p-6">
+        <div id="img-container" class="card card-side flex">
+          <figure>
+            <img
+              id="imgg"
+              class="w-16 p-2 rounded-2xl"
+              src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+              alt="Movie"
+            />
+          </figure>
+          <div class="flex">
+            <div class="p-1">
+              <h2 id="menu-title" class="font-bold">New movie is released!</h2>
+              <p>Click the</p>
+            </div>
+            <button class="btn btn-square">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <img src="./images//Line 1.png" alt="" />
+        <div class="p-6 flex justify-between">
+          <div>
+            <h1 class="font-semibold">Sub-Total</h1>
+            <p> 0 Items</p>
+          </div>
+          <h1 class="font-bold">00 TK</h1>
+        </div>
+      </div>
+    
+    </section>
+
+    <!-- Footer Part -->
+
+    <footer class="footer mt-11 p-10 bg-[#282531] text-white">
+      <aside class="my-4">
+        <img class="w-32" src="./images/logo.png" alt="" />
+        <p class="mt-6">
+          Millions of people of all ages and from around <br />
+          the world are improving their lives with us
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title">Course</h6>
+        <a class="link link-hover">Graphic Design</a>
+        <a class="link link-hover">Web Design</a>
+        <a class="link link-hover">Business</a>
+        <a class="link link-hover">Marketing</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Terms</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Useful Link</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
+
+    <aside>
+      <p class="text-center text-white pb-4 bg-[#282531]">
+        Copyright © 2024 21daysofcode.com
+      </p>
+    </aside>
+    <script src="./index.js"></script>
+  </body>
+</html>
