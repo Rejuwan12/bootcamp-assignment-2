@@ -63,7 +63,7 @@ function renderCourses() {
   const parentElement = document.getElementById('parent');
   parentElement.innerHTML = data.map(item => {
     return `
-    <div class="card w-80 bg-base-100 shadow-xl">
+    <div class="card md:w-80 w-72 m-auto gap-4 bg-base-100 shadow-xl">
       <figure class="px-4 pt-8">
         <img src="${item.img}" alt="Course Image" />
       </figure>
